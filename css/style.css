@@ -74,15 +74,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------*/
-p {
-  line-height: 1.625;
-}
-
 body {
-  font-family: "Roboto";
+  font-family: "Open Sans";
   font-weight: 500;
   font-size: 18px;
-  color: #000;
+  color: #786450;
 }
 
 .wrapper {
@@ -124,4 +120,98 @@ body {
   [class*=page] {
     min-height: 100vh;
   }
+}
+
+.wrapper {
+  background: linear-gradient(to top right, #EEBE6C 0%, #CA7C4E 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#EEBE6C", endColorstr="#CA7C4E",GradientType=1 );
+  justify-content: center;
+}
+.wrapper__container {
+  border-radius: 4px;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2745098039);
+  background-color: #fff;
+}
+
+.profile__img {
+  display: inline-flex;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+.profile__img img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+.profile__name {
+  margin-bottom: 45px;
+  font-size: 16px;
+  line-height: 1.2;
+  text-align: center;
+  font-weight: 600;
+  color: #786450;
+}
+.profile .text-span {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.box {
+  display: grid;
+  grid-template-columns: 0.7fr 0.3fr;
+  justify-content: center;
+  align-items: center;
+}
+.box__column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  padding: 30px 60px;
+  text-align: center;
+  align-self: center;
+  background-color: rgba(153, 126, 98, 0.4470588235);
+  transition: background-color 0.5s ease-in-out;
+}
+.box__column:not(:last-child) {
+  border-bottom: 1px solid #fff;
+}
+.box__column:hover {
+  background-color: rgba(170, 118, 63, 0.6352941176);
+}
+.box__column-profile {
+  grid-row: span 3;
+  padding: 70px 100px;
+  align-self: flex-start;
+}
+.box__number {
+  font-size: 20px;
+  font-weight: 600;
+}
+.box__text {
+  font-size: 16px;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.actions__btn {
+  font-size: 16px;
+  color: #786450;
+  border: 1px solid #786450;
+  padding: 8px 56px;
+  border-radius: 29px;
+  transition: all 0.3s ease-out;
+  font-weight: 600;
+}
+.actions__btn:hover {
+  color: #fff;
+  background-color: #786450;
 }

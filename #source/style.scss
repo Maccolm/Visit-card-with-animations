@@ -4,3 +4,104 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:600,300);
 
 $brown: #786450;
+
+.wrapper {
+	background: -webkit-linear-gradient(bottom left, #EEBE6C 0%, #CA7C4E 100%);
+  background: -moz-linear-gradient(bottom left, #EEBE6C 0%, #CA7C4E 100%);
+  background: -o-linear-gradient(bottom left, #EEBE6C 0%, #CA7C4E 100%);
+  background: linear-gradient(to top right, #EEBE6C 0%, #CA7C4E 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#EEBE6C', endColorstr='#CA7C4E',GradientType=1 ); 
+  justify-content: center;
+  &__container{
+	border-radius: 4px;
+	box-shadow: 4px 4px 15px #00000046;
+	background-color: #fff;
+}
+}
+.profile {
+  &__img {
+	display: inline-flex;
+	width: 100%;
+	justify-content: center;
+	margin-bottom: 25px;
+	img{
+		height: 150px;
+		width: 150px;
+		border-radius: 50%;
+		object-fit: fill;
+	}
+	}
+	&__name{
+		margin-bottom: 45px;
+		font-size: 16px;
+		line-height: 1.2;
+		text-align: center;
+		font-weight: 600;
+		color: $brown;
+	}
+	.text-span{
+	font-weight: 500;
+	font-size: 14px;
+	}
+}
+.circle-1 {
+}
+.circle-2 {
+}
+.box {
+	display: grid;
+	grid-template-columns: 0.7fr 0.3fr;
+	justify-content: center;
+	align-items: center;
+	&__column {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		width: 100%;
+		padding: 30px 60px;
+		text-align: center;
+		align-self: center;
+		background-color: #997e6272;
+		&:not(:last-child){
+			border-bottom: 1px solid #fff;
+		}
+		transition: background-color 0.5s ease-in-out;
+		&:hover{
+			background-color: #aa763fa2;
+		}
+	}
+  &__column-profile {
+	grid-row: span 3;
+	padding: 70px 100px;
+	align-self: flex-start;
+  }
+  &__number {
+	font-size: 20px;
+	font-weight: 600;
+  }
+  &__text {
+	font-size: 16px;
+  }
+}
+.image {
+}
+.actions {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	&__btn {
+		font-size: 16px;
+		color: $brown;
+		border: 1px solid $brown;
+		padding: 8px 56px;
+		border-radius: 29px;
+		transition: all 0.3s ease-out;
+		font-weight: 600;
+		&:hover{
+			color: #fff;
+			background-color: $brown;
+		}
+	}
+}
