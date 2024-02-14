@@ -13,6 +13,7 @@ $brown: #786450;
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#EEBE6C', endColorstr='#CA7C4E',GradientType=1 ); 
   justify-content: center;
   &__container{
+	position: relative;
 	border-radius: 4px;
 	box-shadow: 4px 4px 15px #00000046;
 	background-color: #fff;
@@ -24,6 +25,7 @@ $brown: #786450;
 	width: 100%;
 	justify-content: center;
 	margin-bottom: 25px;
+	cursor: pointer;
 	img{
 		height: 150px;
 		width: 150px;
@@ -45,8 +47,27 @@ $brown: #786450;
 	}
 }
 .circle-1 {
+	position: absolute;
+	top: 65px;
+	height: 160px;
+	width: 160px;
+	border-radius: 50%;
+	border: 1px solid $brown;
+	border-color: $brown $brown $brown transparent;
+	transition: all 1.5s ease-in-out;
 }
 .circle-2 {
+	@extend .circle-1;
+	top: 60px;
+	height: 170px;
+	width: 170px;
+	border-color: $brown transparent $brown $brown;
+}
+.profile__img:hover .circle-1{
+	transform: rotate(180deg);
+}
+.profile__img:hover .circle-2{
+	transform: rotate(-180deg);
 }
 .box {
 	display: grid;
