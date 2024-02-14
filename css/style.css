@@ -216,6 +216,7 @@ body {
   grid-row: span 3;
   padding: 70px 100px;
   align-self: flex-start;
+  position: relative;
 }
 .box__number {
   font-size: 20px;
@@ -242,4 +243,45 @@ body {
 .actions__btn:hover {
   color: #fff;
   background-color: #786450;
+}
+
+.svg__pointer {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  color: #786450;
+  bottom: 82px;
+  right: 47px;
+  fill: #4e3e2e;
+  opacity: 0;
+  animation: moveAndClick 4s linear infinite normal 1s;
+}
+
+.box__column-profile:hover .svg__pointer {
+  animation: none;
+}
+
+@keyframes moveAndClick {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+  25% {
+    opacity: 1;
+    transform: translate(-23px, -20px);
+  }
+  55% {
+    transform: translate(-61px, -27px);
+  }
+  65% {
+    transform: translate(-61px, -27px) scale(0.9);
+  }
+  75% {
+    transform: translate(-61px, -27px) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-61px, -27px);
+    opacity: 0;
+  }
 }
