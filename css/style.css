@@ -245,6 +245,10 @@ body {
   background-color: #786450;
 }
 
+.animated {
+  animation: scaling 4s linear infinite normal 0s;
+}
+
 .svg__pointer {
   position: absolute;
   height: 30px;
@@ -254,15 +258,26 @@ body {
   right: 47px;
   fill: #4e3e2e;
   opacity: 0;
-  animation: moveAndClick 4s linear infinite normal 1s;
+  animation: moveAndClick 4s linear infinite normal 0s;
 }
 .svg__checkpoint {
   position: absolute;
   bottom: 133px;
   right: 54px;
+  stroke-dasharray: 40;
+  stroke-dashoffset: 40;
+  animation: fillCheckpoint 4s ease-in-out infinite normal;
 }
 
 .box__column-profile:hover .svg__pointer {
+  animation: none;
+}
+
+.box__column-profile:hover .svg__checkpoint {
+  animation: none;
+}
+
+.box__column-profile:hover .animated {
   animation: none;
 }
 
@@ -288,5 +303,40 @@ body {
   100% {
     transform: translate(-61px, -27px);
     opacity: 0;
+  }
+}
+@keyframes fillCheckpoint {
+  0% {
+    stroke-dasharray: 40;
+    stroke-dashoffset: 40;
+  }
+  70% {
+    stroke-dasharray: 40;
+    stroke-dashoffset: 40;
+  }
+  85% {
+    stroke-dasharray: 40;
+    stroke-dashoffset: 0;
+  }
+  90% {
+    stroke-dasharray: 40;
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  100% {
+    stroke-dasharray: 40;
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
+}
+@keyframes scaling {
+  60% {
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(0.95);
+  }
+  80% {
+    transform: scale(1);
   }
 }
