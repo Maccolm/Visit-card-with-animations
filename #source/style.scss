@@ -133,6 +133,7 @@ $brown: #786450;
 .svg{
 	&__pointer{
 		position: absolute;
+		z-index: 2;
 		height: 30px;
 		width: 30px;
 		color: $brown;

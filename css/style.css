@@ -26,7 +26,6 @@ nav, footer, header, aside {
 html, body {
   height: 100%;
   width: 100%;
-  font-size: 100%;
   line-height: 1;
   font-size: 14px;
   -ms-text-size-adjust: 100%;
@@ -251,6 +250,7 @@ body {
 
 .svg__pointer {
   position: absolute;
+  z-index: 2;
   height: 30px;
   width: 30px;
   color: #786450;
