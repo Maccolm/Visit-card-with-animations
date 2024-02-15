@@ -139,6 +139,11 @@ $brown: #786450;
 		opacity: 0;
 		animation: moveAndClick 4s linear infinite normal 1s;
 	}
+	&__checkpoint{
+		position: absolute;
+		bottom: 133px;
+		right: 54px;
+	}
 }
 .box__column-profile:hover .svg__pointer{
 	animation: none;
