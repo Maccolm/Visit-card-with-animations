@@ -141,6 +141,7 @@ $brown: #786450;
 		fill: #4e3e2e;
 		opacity: 0;
 		animation: moveAndClick 4s linear infinite normal 0s;
+		fill-rule:evenodd;
 	}
 	&__checkpoint{
 		position: absolute;
